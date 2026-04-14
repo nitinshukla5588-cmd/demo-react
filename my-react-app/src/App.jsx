@@ -1,18 +1,22 @@
+import { useState } from 'react'
 import './App.css'
 function App() {
-    return (
+  const [data, setData] = useState("50000")
+  const [toggle, setToggle] = useState(false)
+  function fun(){
+    setData("40000")}
+    function tog(){
+      setToggle(!toggle)
+    }
+  return (
     <>
-   
-      <button onClick={function call(){alert("WELCOME IN NEW PROJECT")}}> CLICK ME </button>
-      <br></br>
-      <button onClick={function call(){alert("YOU HAVE CLICKED ON BANANA")}}> BANANA </button>
-      <br></br>
-      <button onClick={function call(){alert("YOU HAVE CLICKED ON APPLE")}}> APPLE </button>
+    <h1>STATE OF VARIABLE FOR REACT</h1>
+        <button onClick={fun}> WITHDRAW 10K </button>
+    <h1>{data}</h1>
+    <h1>Status: {toggle ? 'ON' : 'OFF'}</h1>
+      <button onClick={tog}> TOGGLE </button>
+      <textarea placeholder='WRITE SOMETHING'></textarea>
     </>
   )
 }
-<div>
-      <h1>WELCOME IN NEW PROJECT</h1>
-
-</div>
 export default App
